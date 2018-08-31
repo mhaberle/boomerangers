@@ -1,0 +1,115 @@
+
+:root {
+$brandcolor1: white; 
+$brandcolor2: gray;
+$brandcolor3: black;
+$button-no-hover:;
+$button-hover:;
+}
+
+body, html {
+	height: 100%;
+}
+
+.asteriskField {
+    display: none;
+}
+
+/*Controls Background Images*/
+div#login-b-img.bg-img {
+    background-image: url("../images/login_background.jpg");
+}
+div#signup-b-img.bg-img {
+    background-image: url("../images/signup_background.jpg");
+}
+
+/*Background Image Styling*/
+.bg-img { 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid {
+	height: 100%;
+}
+
+.row {
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+}
+
+h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+p#front-page {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	text-align: center;
+}
+
+p#front-page-error-message {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+h1#front-page {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	text-align: center;
+}
+
+h3#front-page-password-reset {
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	/*font-size: 15px;*/
+	text-align: center;
+}
+
+label.requiredField {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	text-align: center;
+}
+
+a#nav-front-page {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: gray;
+}
+
+a:hover#nav-front-page {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+}
+
+.btn-primary {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+#message-box {
+    margin: 30px;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+
+

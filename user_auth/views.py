@@ -11,22 +11,6 @@ def user_signup(request, sign_up_type='not_specified'):
 	opposite_link_message = ''
 	error_message = ''
 
-	# #signals what type of user profile to create
-	# if sign_up_type == 'freelance':
-	# 	user_type = 'freelancer'
-	# elif sign_up_type == 'post-an-opportunity':
-	# 	user_type = 'employer'
-	# else:
-	# 	sign_up_type = 'not_specified'
-
-	#set the variable to get the user to alternate signup page if they clicked on the wrong one
-	# if sign_up_type == "freelance":
-	# 	opposite_link = "post-an-opportunity"
-	# 	opposite_link_message = "post an opportunity"
-	# else:
-	# 	opposite_link  = "freelance"
-	# 	opposite_link_message = "freelance or volunteer"
-
 	if request.method=="POST":
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -68,6 +52,7 @@ def user_login(request):
 															'signup_link': signup_link,
 															'error_message': error_message,
 															})
+
 
 def user_logout(request):
 	logout(request)
