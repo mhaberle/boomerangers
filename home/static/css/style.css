@@ -48,8 +48,14 @@ h1 {
 	text-align: center;
 }
 
+div#front-page {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+    border-radius: 25px;
+}
+
 p#front-page {
-	color: white;
+	color: gray;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	text-align: center;
@@ -63,7 +69,7 @@ p#front-page-error-message {
 }
 
 h1#front-page {
-	color: white;
+	color: gray;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 50px;
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -79,8 +85,8 @@ h3#front-page-password-reset {
 
 label.requiredField {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
-	color: white;
+	font-size: 25px;
+	color: black;
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 	text-align: center;
 }

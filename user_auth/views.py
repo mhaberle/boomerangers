@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from user_auth.forms import LoginForm, UserCreationForm
 
 def user_signup(request, sign_up_type='not_specified'):
-	form_title = 'Sign Up'
+	form_title = 'Sign up'
 	login_link = '' #corresponds to a link if someone wants to login
 	opposite_link = ''
 	opposite_link_message = ''
@@ -31,7 +31,7 @@ def user_signup(request, sign_up_type='not_specified'):
 															})
 
 def user_login(request):
-	form_title = 'Log In'
+	form_title = 'Log in'
 	signup_link = '' #corresponds to a link if someone wants to signup
 	error_message = ''
 

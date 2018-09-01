@@ -47,13 +47,18 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" id="nav-front-page" href="/post-an-opportunity/signup">Get Started</a>
+          <a class="nav-link" id="nav-front-page" href="/post-an-opportunity/signup">Get started</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="nav-front-page" href="/freelance/signup">Create a Boomerang</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="nav-front-page" href="{% url 'login' %}">Login</a>
+          {% ifequal form_title "Sign up" %}
+          <a class="nav-link" id="nav-front-page" href="{% url 'login' %}">Log in</a>
+          {% endifequal %}
+          {% ifequal form_title "Log in" %}
+          <a class="nav-link" id="nav-front-page" href="{% url 'signup' %}">Sign up</a>
+          {% endifequal %}
         </li>
       </ul>
     </div>
@@ -61,10 +66,10 @@
 </head>
 <body>
 {% endif %}
-{% ifequal form_title "Log In" %}
+{% ifequal form_title "Log in" %}
 <div class='bg-img' id='login-b-img'>
 {% endifequal %}
-{% ifequal form_title "Sign Up" %}
+{% ifequal form_title "Sign up" %}
 <div class='bg-img' id='signup-b-img'>
 {% endifequal %}
 {% block content %}
