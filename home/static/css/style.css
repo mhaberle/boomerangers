@@ -16,8 +16,8 @@ body, html {
 }
 
 /*Controls Background Images*/
-div#login-b-img.bg-img {
-    background-image: url("../images/login_background.jpg");
+/*div#login-b-img.bg-img {
+    background-image: url("../images/login_background.jpg");*/
 }
 div#signup-b-img.bg-img {
     background-image: url("../images/signup_background.jpg");
@@ -49,14 +49,14 @@ h1 {
 }
 
 div#front-page {
-	background-color: rgba(255, 255, 255, 0.5);
+/*	background-color: rgba(255, 255, 255, 0.5);
 	padding: 10px;
-    border-radius: 25px;
+    border-radius: 25px;*/
 }
 
 p#front-page {
-	color: gray;
-	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 15px;
 	text-align: center;
 }
@@ -69,10 +69,10 @@ p#front-page-error-message {
 }
 
 h1#front-page {
-	color: gray;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 50px;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	color: black;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 25px;
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
 	text-align: center;
 }
 
@@ -84,10 +84,10 @@ h3#front-page-password-reset {
 }
 
 label.requiredField {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
 	color: black;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
 	text-align: center;
 }
 
@@ -105,7 +105,7 @@ a:hover#nav-front-page {
 }
 
 .btn-primary {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }

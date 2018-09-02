@@ -8,14 +8,15 @@
     </div>
 
    	<div class='col-4' id="front-page">
-		   
-      <div class="d-flex justify-content-center">
-      </div>
-		
+
+
+  
+		    <h1 id="front-page">Let's get started</h1>
+        <p id="front-page">Enter your email and password to boomerang</p>
         <form method="POST">
           {% csrf_token %}
           {{ form|crispy }}
-          <button type="submit" class="btn btn-primary">{{ form_title }}</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">{{ form_title }}</button>
         </form>
     
         {% ifequal form_title "Log in" %}
