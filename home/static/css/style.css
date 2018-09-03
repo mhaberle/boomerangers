@@ -11,6 +11,10 @@ body, html {
 	height: 100%;
 }
 
+.img-thumbnail {
+	border: 0px;
+}
+
 .asteriskField {
     display: none;
 }
@@ -92,22 +96,46 @@ label.requiredField {
 }
 
 a#nav-front-page {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
 	color: gray;
 }
 
+a#nav-front-page-logo {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #3db3d4;
+}
+
+a:hover#nav-front-page-logo {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
 a:hover#nav-front-page {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
 	color: black;
 	text-decoration: none;
 }
 
 .btn-primary {
+	background-color: #3db3d4;
+	border-color: #3db3d4;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+}
+
+.btn-primary:hover {
+	background-color: #37A1BF;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
 }
 
 #message-box {

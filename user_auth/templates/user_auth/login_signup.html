@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container-fluid">
@@ -9,8 +10,7 @@
 
    	<div class='col-4' id="front-page">
 
-
-  
+        <img src="{% static 'images/color_logo_transparent.png' %}" class="img-fluid" alt=" ">
 		    <h1 id="front-page">Let's get started</h1>
         <p id="front-page">Enter your email and password to boomerang</p>
         <form method="POST">

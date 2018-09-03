@@ -16,11 +16,11 @@
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   {% if user.is_authenticated %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-link" id="nav-front-page" href="/home">Boomerangers</a>
+    <a class="navbar-link" id="nav-front-page-logo" href="/home">boomerangers</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,7 +40,7 @@
   </nav>
   {% else %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-link" id="nav-front-page" href="/home">Boomerangers</a>
+    <a class="navbar-link" id="nav-front-page-logo" href="/home">boomerangers</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,7 +50,7 @@
           <a class="nav-link" id="nav-front-page" href="/post-an-opportunity/signup">Get started</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="nav-front-page" href="/freelance/signup">Create a Boomerang</a>
+          <a class="nav-link" id="nav-front-page" href="/freelance/signup">Boomerang</a>
         </li>
         <li class="nav-item">
           {% ifequal form_title "Sign up" %}

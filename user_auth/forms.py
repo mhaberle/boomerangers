@@ -13,7 +13,7 @@ class UserCreationForm(forms.ModelForm):
 
 	password1 = forms.CharField(label='Password',
 		widget = forms.PasswordInput)
-	password2 = forms.CharField(label='Password confirmation',
+	password2 = forms.CharField(label='Confirm password',
 		widget = forms.PasswordInput)
 
 	def __init__(self, *args, **kwargs):
