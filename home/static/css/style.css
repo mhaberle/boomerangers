@@ -19,6 +19,10 @@ body, html {
     display: none;
 }
 
+legend {
+	display: none;
+}
+
 /*Controls Background Images*/
 /*div#login-b-img.bg-img {
     background-image: url("../images/login_background.jpg");*/

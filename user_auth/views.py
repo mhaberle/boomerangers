@@ -19,7 +19,7 @@ def user_signup(request, sign_up_type='not_specified'):
 			raw_password = form.cleaned_data.get('password1')
 			user = authenticate(email=email, password=raw_password)
 			login(request, user)
-			return redirect('../../profile/setup')#redirect to user profile
+			return redirect('../../dashboard/profile')#redirect to user profile
 	else:
 		form = UserCreationForm()
 	return render(request, 'user_auth/login_signup.html', { 'form': form,

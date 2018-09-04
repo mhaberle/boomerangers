@@ -20,5 +20,6 @@ from django.urls import include, path
 
 urlpatterns = [
 	path('', include('user_auth.urls')),
+	path('dashboard/', include('user_profile.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
