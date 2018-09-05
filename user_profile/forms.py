@@ -60,10 +60,16 @@ class UserProfileForm(ModelForm):
 				Div(
 					Field(	'first_name', placeholder=var_first_name),
 					Field(	'last_name',  placeholder=var_last_name),
-					Field(	'birth_date', placeholder='blank'),
 							css_class = "form-inline",
 					)
 				),
+			Fieldset(
+				'Birth Date',
+				Div(
+					Field( 'birth_date', placeholder='blank'),
+							css_class = "form-inline",
+					)
+				),	
 			Fieldset(
 				'Contact Info',
 				Div(
@@ -84,7 +90,7 @@ class UserProfileForm(ModelForm):
 					)
 				),
 		    ButtonHolder(
-            	Submit('save', 'Submit', css_class='button white')
+            	Submit('save', 'Submit', css_class='btn btn-primary btn-lg btn-block')
             ),
         )
 

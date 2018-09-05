@@ -1,0 +1,22 @@
+{% extends 'home/profile_base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="tab-pane fade show active" id="{{ view_title }}" role="tabpanel" aria-labelledby="{{ view_title }}-tab">
+
+<div class="container-fluid">
+  <div class="row justify-content-md-center" id="dashboard">
+    <div class="col col-md-3" id="front-page">
+    </div>
+   	<div class='col-md-auto' id="front-page">
+		<div class="d-flex justify-content-center">
+   		</div>
+      {% for info in user_info %}
+      <p>{{ info }}</p>
+      {% endfor %}
+	</div>
+    <div class="col col-md-3" id="front-page">
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
