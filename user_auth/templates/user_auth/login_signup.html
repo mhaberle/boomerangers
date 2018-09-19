@@ -10,9 +10,9 @@
 
    	<div class='col-4' id="front-page">
 
-        <img src="{% static 'images/color_logo_transparent.png' %}" class="img-fluid" alt=" ">
+        <img src="{% static 'images/color_logo_transparent.png' %}" class="img-fluid center" alt=" ">
 		    <h1 id="front-page">Let's get started</h1>
-        <p id="front-page">Enter your email and password to boomerang</p>
+        <p id="front-page">Enter your email and password to Boomerang</p>
         <form method="POST">
           {% csrf_token %}
           {{ form|crispy }}

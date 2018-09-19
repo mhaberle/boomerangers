@@ -19,18 +19,13 @@ body, html {
     display: none;
 }
 
-
-
-/*Controls Background Images*/
-/*div#login-b-img.bg-img {
-    background-image: url("../images/login_background.jpg");*/
-}
-div#signup-b-img.bg-img {
-    background-image: url("../images/signup_background.jpg");
+.row {
+	padding-top: 15px;
 }
 
 /*Background Image Styling*/
-.bg-img { 
+.home-bg-img {
+	background-image: url("../images/get_started_background_image1.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -41,23 +36,27 @@ div#signup-b-img.bg-img {
 	height: 100%;
 }
 
-div#dashboard.row.justify-content-md-center {
-	margin-top: 10px;
-	position: none	;
-	top: none;
-	transform: none;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.row {
-    position: relative;
-    top: 50%;
-    transform: perspective(1px) translateY(-50%);
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
 h1 {
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 30px;
+	font-weight: bold;
+	color: #3db3d4;
 	text-align: center;
 }
 
@@ -70,7 +69,14 @@ div#front-page {
 p#front-page {
 	color: black;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 15px;
+	font-size: 20px;
+	text-align: center;
+}
+
+p#front-page-white {
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -84,6 +90,22 @@ p#front-page-error-message {
 h1#front-page {
 	color: black;
 	font-family: 'Ubuntu', sans-serif;
+	font-size: 35px;
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+	text-align: center;
+}
+
+h1#front-page-white {
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 35px;
+/*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+	text-align: center;
+}
+
+h2#front-page-white {
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 25px;
 /*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
 	text-align: center;
@@ -93,6 +115,13 @@ h3#front-page-password-reset {
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	/*font-size: 15px;*/
+	text-align: center;
+}
+
+h4 {
+	color: #3db3d4;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -106,13 +135,13 @@ label.requiredField {
 
 /*links*/
 
-a#nav-front-page {
+a#nav-front-page, a.nav-link.dropdown-toggle {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 	color: gray;
 }
 
-a#nav-front-page-logo {
+a#nav-front-page-logo, {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 22px;
 	font-weight: bold;
@@ -127,7 +156,7 @@ a:hover#nav-front-page-logo {
 	text-decoration: none;
 }
 
-a:hover#nav-front-page {
+a:hover#nav-front-page, a:hover.nav-link.dropdown-toggle {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 	color: black;
@@ -213,6 +242,11 @@ div#div_id_city div.controls input#id_city.textinput.textInput.form-control {
 
 div#div_id_state.form-group {
 	width: 18%;
+	margin-right: 2%;
+}
+
+input#id_state.select.form-control {
+	width: 100%;
 	margin-right: 2%;
 }
 

@@ -18,7 +18,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+from user_profile import views
+
 urlpatterns = [
+    path('', views.get_started, name="home_get_started"),
     path('profile/', include('user_profile.urls')),
 	path('', include('user_auth.urls')),
     path('admin/', admin.site.urls),
