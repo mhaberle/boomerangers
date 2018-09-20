@@ -103,10 +103,10 @@ h1#front-page-white {
 	text-align: center;
 }
 
-h2#front-page-white {
+h1#front-page-white-jumbo {
 	color: white;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 25px;
+	font-size: 50px;
 /*	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
 	text-align: center;
 }
@@ -197,6 +197,8 @@ legend {
 	text-align: left;
 }
 
+/* user profile form configuration */
+
 div#div_id_first_name {
 	margin-right: 10px;
 }
@@ -264,4 +266,80 @@ div#div_id_zip_code div.controls input#id_zip_code.textinput.textInput.form-cont
 
 div.form-inline {
 	margin-bottom: 16px;
+}
+
+/* Create Boomerang configuration */
+
+div#div_id_post_name {
+	width: 100%;
+}
+
+div#div_id_post_name div.controls {
+	width: 100%;
+}
+
+div#div_id_post_name div.controls input#id_post_name.textinput.textInput.form-control {
+	width: 100%;
+}
+
+div#div_id_post_start_date {
+	width: 49%;
+	margin-right: 2%;
+}
+
+div#div_id_post_start_date div.controls {
+	width: 98%;
+}
+
+div#div_id_post_start_date div.controls input#id_start_date.dateinput.form-group {
+	width: 100%;
+}
+
+div#div_id_post_end_date {
+	width: 49%;
+}
+
+div#div_id_post_end_date div.controls {
+	width: 100%;
+}
+
+div#div_id_post_end_date div.controls input#id_post_end_date.dateinput.form-group {
+	width: 100%;
+}
+
+div#div_id_post_details {
+	width: 100%;
+}
+
+div#div_id_post_details div.controls {
+	width: 100%;
+}
+
+div#div_id_post_details div.controls textarea#id_post_details.textarea.form-control {
+	width: 100%;
+}
+
+div#div_id_street.form-group {
+	width: 49%;
+	margin-right: 2%;
+}
+
+div#div_id_street div.controls {
+	width: 100%;
+}
+
+div#div_id_street div.controls input#id_street.post_details.textinput.textInput.form-control {
+	width: 100%;
+}
+
+div#div_id_city.form-group {
+	width: 49%;
+}
+
+div#div_id_city div.controls {
+	width: 100%;
+}
+
+div#div_id_city div.controls input#id_city.post_details.textinput.textInput.form-control {
+	width: 100%;
 }

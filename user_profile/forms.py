@@ -96,85 +96,64 @@ class UserProfileForm(ModelForm):
 
 class PostDetailForm(ModelForm):
 
-	class Meta:
-		model = UserProfile
-		fields = ['first_name', 'last_name', 'birth_date', 'phone_number', 'city', 'state', 'zip_code',]
+# looks like i need to init the user that creates this instance to attach it to the model entry, i believe since i'm missing this data, it's not letting me submit the form entry
 
+
+	class Meta:
+		model = PostDetail
+		fields = ['poster', 'post_name', 'post_start_date', 'post_end_date', 'post_details', 'date_posted', 'street', 'city', 'state', 'zip_code', 'deactivate_post',]
 
 	def __init__(self, *args, **kwargs):
-		self.user = kwargs.pop('user')
+
 		self.helper = FormHelper()
-		self.helper.form_id = 'id-UserProfileForm'
+		self.helper.form_id = 'id-PostDetailForm'
 		self.helper.form_class = 'form-inline'
 		self.helper.form_show_labels = False
 
-		super(UserProfileForm, self).__init__(*args, **kwargs)
-
-		profile_instance = UserProfile.objects.get(user=self.user)
-
-
-		var_first_name = profile_instance.first_name
-		if var_first_name == '':
-			var_first_name = 'First name'
-			var_last_name = 'Last name'
-			var_phone_number = 'Phone number'
-			var_city = 'City'
-			var_state = 'State'
-			var_zip_code = 'Zip code'
-
-		else:
-			var_first_name
-			var_last_name = profile_instance.last_name
-
-			var_phone_number = ''
-			if len(profile_instance.phone_number) == 10:
-				index_count = 1
-				for num in profile_instance.phone_number:
-					var_phone_number += num
-					if index_count == 3 or index_count == 6:
-						var_phone_number += '-'
-					index_count += 1
-
-			var_city = profile_instance.city
-			var_state = profile_instance.state
-			var_zip_code = profile_instance.zip_code
+		super(PostDetailForm, self).__init__(*args, **kwargs)
 
 		self.helper.layout = Layout(
 			Fieldset(
-				'Name',
+				'Event title',
 				Div(
-					Field(	'first_name', placeholder=var_first_name),
-					Field(	'last_name',  placeholder=var_last_name),
+					Field( 'post_name', placeholder='Your event name'),
 							css_class = "form-inline",
 					)
 				),
 			Fieldset(
-				'Birth Date',
+				'Event date',
 				Div(
-					Field( 'birth_date', placeholder='blank'),
+					Field(	'post_start_date', placeholder='Event start date'),
+					Field(	'post_end_date',  placeholder='Event end date'),
 							css_class = "form-inline",
 					)
-				),	
+				),
 			Fieldset(
-				'Contact Info',
+				'Event details',
 				Div(
-					Field(	'phone_number', placeholder=var_phone_number),
+					Field( 'post_details', placeholder='Tell us about your event'),
 						css_class = "form-inline",
 					)
 				),
 			Fieldset(
-				'Address',
+				'Event location',
 				Div(
-					Field(	'city', placeholder=var_city),
+					Field(	'street', css_class='post_details', placeholder='Street'),
+					Field(	'city', css_class='post_details', placeholder='City'),					
 							css_class = "form-inline",
 					),
 				Div(
-					Field(	'state', placeholder=var_state),
-					Field(	'zip_code', placeholder=var_zip_code),
+					Field(	'state', placeholder='State'),
+					Field(	'zip_code', placeholder='Zip code'),
 							css_class = "form-inline",
 					)
 				),
-		    ButtonHolder(
+			Fieldset(
+				'Keep post active',
+				Div(
+					Field( 'deactivate_post', placeholder=''),
+						css_class = "form-inline",
+					)
+				),
             	Submit('save', 'Submit', css_class='btn btn-primary btn-lg btn-block')
-            ),
-        )
+            )

@@ -20,7 +20,7 @@
 
   {% if user.is_authenticated %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-link" id="nav-front-page-logo" href="/home">        
+    <a class="navbar-link" id="nav-front-page-logo" href="{% url 'home_get_started' %}">        
       <img src="{% static 'images/color_logo_transparent.png' %}" class="img-fluid" width="250" alt=" "></a>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -31,7 +31,7 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Boomerang</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Create Boomerang</a>
+      <a class="dropdown-item" href="{% url 'create_boomerang' %}">Create Boomerang</a>
       <a class="dropdown-item" href="#">Browse Boomerangs</a>
       <a class="dropdown-item" href="#">Something else here</a>
       <div class="dropdown-divider"></div>
@@ -46,7 +46,7 @@
   </nav>
   {% else %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-link" id="nav-front-page-logo" href="/home">        
+    <a class="navbar-link" id="nav-front-page-logo" href="{% url 'home_get_started' %}">        
       <img src="{% static 'images/color_logo_transparent.png' %}" class="img-fluid" width="250" alt=" "></a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
