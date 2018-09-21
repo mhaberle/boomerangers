@@ -70,15 +70,18 @@ def create_boomerang(request):
 	current_user = request.user
 	current_user_instance = UserProfile.objects.get(user=current_user) 
 	if request.method=="POST":
-		form = PostDetailForm(request.POST)
+		form = PostDetailForm(request.POST, user=current_user_instance)
 		if form.is_valid():
 			form.save()
 			return redirect('../view')
 	else:
-		form = PostDetailForm()
+		form = PostDetailForm(user=current_user_instance)
 	return render(request, 'user_profile/create_boomerang.html', {	'form': form,
 																	'view_title': view_title,
 																	'user': current_user,})
+
+
+# form = SomeModelForm(request.POST or None, initial={"option": "10"})
 
 # this is for editing the boomerangs
 # @login_required

@@ -38,12 +38,12 @@ class UserProfile(models.Model):
 
 class PostDetail(models.Model):
 
-	poster = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	post_name = models.CharField("post name", max_length=50)
-	post_start_date = models.DateField(verbose_name="start date", default=datetime.now)
-	post_end_date = models.DateField(verbose_name="end date", default=datetime.now)	
+	class_start_date = models.DateField(verbose_name="start date", default=datetime.now)
+	class_start_time = models.TimeField(verbose_name="time", default=datetime.now)
+
 	post_details = models.TextField("post details")
-	date_posted = models.DateField(auto_now_add=False)
 	#event location
 	street = models.CharField("street address", max_length=100)
 	city = models.CharField("city", max_length=100)
@@ -58,9 +58,9 @@ class PostDetail(models.Model):
 	zip_code = models.CharField("zip code", max_length=5)
 
 	CONTINUE_POSTING = (
-		('True', 'True'), ('False', 'False'), 
+		('Yes', 'Yes'), ('No', 'No'), 
 		)
-	deactivate_post = models.CharField('remove listing', max_length=50, choices=CONTINUE_POSTING, default='False')
+	remove_post = models.CharField('remove listing', max_length=50, choices=CONTINUE_POSTING, default='False')
 
 	def __str__(self):
 		return self.post_name

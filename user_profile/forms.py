@@ -97,14 +97,12 @@ class UserProfileForm(ModelForm):
 class PostDetailForm(ModelForm):
 
 # looks like i need to init the user that creates this instance to attach it to the model entry, i believe since i'm missing this data, it's not letting me submit the form entry
-
-
 	class Meta:
 		model = PostDetail
-		fields = ['poster', 'post_name', 'post_start_date', 'post_end_date', 'post_details', 'date_posted', 'street', 'city', 'state', 'zip_code', 'deactivate_post',]
+		fields = ['user', 'post_name', 'class_start_date', 'class_start_time','post_details', 'street', 'city', 'state', 'zip_code', 'remove_post',]
 
 	def __init__(self, *args, **kwargs):
-
+		self.user = kwargs.pop('user')
 		self.helper = FormHelper()
 		self.helper.form_id = 'id-PostDetailForm'
 		self.helper.form_class = 'form-inline'
@@ -112,7 +110,12 @@ class PostDetailForm(ModelForm):
 
 		super(PostDetailForm, self).__init__(*args, **kwargs)
 
+
+		self.fields['user'].initial = self.user.user
+		self.fields['remove_post'].initial = "No"
+
 		self.helper.layout = Layout(
+			Field( 'user', type='hidden'),
 			Fieldset(
 				'Event title',
 				Div(
@@ -123,8 +126,8 @@ class PostDetailForm(ModelForm):
 			Fieldset(
 				'Event date',
 				Div(
-					Field(	'post_start_date', placeholder='Event start date'),
-					Field(	'post_end_date',  placeholder='Event end date'),
+					Field(	'class_start_time', placeholder='Event start time', form_class="datetime-input"),
+					Field(	'class_start_date', placeholder='Event start date', id="datetimepicker3"),
 							css_class = "form-inline",
 					)
 				),
@@ -149,9 +152,9 @@ class PostDetailForm(ModelForm):
 					)
 				),
 			Fieldset(
-				'Keep post active',
+				'Remove this post',
 				Div(
-					Field( 'deactivate_post', placeholder=''),
+					Field( 'remove_post', placeholder=''),
 						css_class = "form-inline",
 					)
 				),
